@@ -2,203 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Manga Boys</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Manga Boys — eBooks & Books</title>
+<meta name="description" content="The Manga Boys — Buy manga ebooks and print books. Contact for shipping!" />
 
 <style>
-    /* Color Variables */
-    :root {
-        --accent: #e02424; /* Red */
-        --lightblue: #add8ff;
-        --lightpink: #ffb6d5;
-        --bg: #f3f3f3;
-        --card: #ffffff;
-        --text: #111;
-        --muted: #6b7280;
-    }
+:root{
+  --accent:#e02424;
+  --bg:#fff6f8;
+  --muted:#6b7280;
+  --lightblue:#add8ff;
+  --lightpink:#ffb6d5;
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--bg);color:#111}
 
-    /* Global Reset */
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#e02424,#add8ff,#ffb6d5);
+  color:white;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo img{height:80px;border-radius:8px}
+.logo h1{font-size:32px}
 
-    body{background:var(--bg);color:var(--text)}
-
-    /* Logo + Header */
-    header{background:var(--card);padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-    .logo img{height:120px;display:block;margin:0 auto}
-    .logo h1{margin-top:10px;font-size:36px;color:var(--text)}
-
-    /* Navigation Bar */
-    .nav-bar {
-        text-align: center;
-        padding: 15px;
-        background: var(--card);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        border-bottom: 3px solid var(--accent);
-    }
-    .nav-bar a {
-        text-decoration: none;
-        font-size: 20px;
-        color: var(--accent);
-        font-weight: bold;
-        padding: 0 15px;
-    }
-
-    /* Hero Section */
-    .hero{
-        padding:80px 20px;text-align:center;
-        /* NOTE: You need to upload 'manga_bg.jpg' to your repo for this to work */
-        background:url('manga_bg.jpg') center/cover no-repeat; 
-        color:white;
-    }
-    .hero h1{font-size:40px;text-shadow:0 2px 8px rgba(0,0,0,0.8)}
-
-    /* Product Grid */
-    .container {
-        max-width: 1100px;
-        margin: 30px auto;
-        padding: 0 18px;
-    }
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin-top: 25px;
-    }
-    .card {
-        background: var(--card);
-        padding: 15px;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(10,10,10,0.08);
-        display: flex;
-        flex-direction: column;
-    }
-    .card-img {
-        height: 300px;
-        border-radius: 8px;
-        background-color: var(--lightblue);
-        background-size: cover;
-        background-position: center;
-        /* Placeholder image */
-        border: 2px solid var(--accent);
-    }
-    .card h3 {
-        margin: 15px 0 5px 0;
-        font-size: 20px;
-        color: var(--accent);
-    }
-    .price {
-        font-weight: 700;
-        font-size: 1.1em;
-        margin-bottom: 15px;
-    }
-    .btn {
-        background: #25D366; /* WhatsApp Green */
-        color: white;
-        padding: 10px 14px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        display: block; /* Make the button full width */
-        text-align: center;
-        margin-top: auto;
-    }
-
-    /* Instagram Section */
-    .instagram-section{
-        padding:20px;text-align:center;
-        background:linear-gradient(90deg,var(--lightpink),var(--lightblue));
-        color:var(--text);
-    }
-    .instagram-section img{
-        width:120px;height:120px;border-radius:50%;
-        background:white;padding:5px;
-        box-shadow:0 3px 10px rgba(0,0,0,0.2);
-    }
-    .instagram-section h2{margin-top:15px;font-size:28px;font-weight:bold}
-    .instagram-section p{margin-top:8px;font-size:18px}
-    .instagram-section a.btn {
-        background: #C13584; /* Instagram Purple/Pink */
-        margin-top: 15px;
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @media(max-width:560px){
-        .hero h1{font-size:28px}
-        .logo h1{font-size:26px}
-        .nav-bar a {font-size: 16px;}
-    }
+/* SECTION */
+section{text-align:center;padding:40px}
+section img{
+  width:160px;height:160px;border-radius:50%;background:white;
+  padding:10px;border:4px solid #e02424;margin-bottom:18px;
+}
+a.button{
+  background:#e02424;color:white;padding:12px 22px;border-radius:8px;
+  text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px;
+}
+a.button:hover{opacity:.85}
 </style>
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="logo.png" alt="The Manga Boys Logo" />
-        <h1>The Manga Boys</h1>
-    </div>
+  <div class="logo">
+    <img src="logo.png" alt="The Manga Boys Logo" />
+  </div>
+  <h1>The Manga Boys</h1>
 </header>
 
-<nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="founders.html">Meet the Founders</a>
-    </nav>
-
-<div class="hero">
-    <h1>Welcome to The Manga Boys Universe!</h1>
-    <p style="margin-top:10px; font-size:1.2em; text-shadow:0 1px 4px rgba(0,0,0,0.8);">Your source for the best Manga eBooks and physical books.</p>
-</div>
-
-<div class="container">
-    <h2 style="text-align:center; color:var(--accent); font-size:2.5em; margin-bottom:20px;">Featured Manga</h2>
-    
-    <div class="product-grid">
-        
-        <div class="card">
-            <div class="card-img" style="background-image: url('book_aot.jpg');"></div>
-            <h3>Attack on Titan - Vol 1</h3>
-            <p class="price">₹499 (Print) | ₹199 (eBook)</p>
-            <a href="https://wa.me/917041496969?text=Hello%20The%20Manga%20Boys!%20I%20want%20to%20buy%20Attack%20on%20Titan%20Vol%201.%20Please%20send%20purchase%20details." class="btn">Buy on WhatsApp</a>
-        </div>
-
-        <div class="card">
-            <div class="card-img" style="background-image: url('book_jujutsu.jpg');"></div>
-            <h3>Jujutsu Kaisen - Vol 0</h3>
-            <p class="price">₹549 (Print) | ₹249 (eBook)</p>
-            <a href="https://wa.me/917041496969?text=Hello%20The%20Manga%20Boys!%20I%20want%20to%20buy%20Jujutsu%20Kaisen%20Vol%200.%20Please%20send%20purchase%20details." class="btn">Buy on WhatsApp</a>
-        </div>
-
-        <div class="card">
-            <div class="card-img" style="background-image: url('book_chainsaw.jpg');"></div>
-            <h3>Chainsaw Man - Vol 1</h3>
-            <p class="price">₹449 (Print) | ₹149 (eBook)</p>
-            <a href="https://wa.me/917041496969?text=Hello%20The%20Manga%20Boys!%20I%20want%20to%20buy%20Chainsaw%20Man%20Vol%201.%20Please%20send%20purchase%20details." class="btn">Buy on WhatsApp</a>
-        </div>
-        
-        <div class="card">
-            <div class="card-img" style="background-image: url('book_deathnote.jpg');"></div>
-            <h3>Death Note - Box Set</h3>
-            <p class="price">₹4500 (Full Set)</p>
-            <a href="https://wa.me/917041496969?text=Hello%20The%20Manga%20Boys!%20I%20want%20to%20buy%20the%20Death%20Note%20Box%20Set.%20Please%20send%20purchase%20details." class="btn">Buy on WhatsApp</a>
-        </div>
-
-    </div>
-    
-    <p style="text-align:center; margin-top:30px; color:var(--muted);">For custom orders or more titles, contact us directly on WhatsApp!</p>
-</div>
-
-<section class="instagram-section">
-    <img src="logo.png" alt="The Manga Boys Logo">
-    <h2>Follow Us On Instagram</h2>
-    <p>@the_manga_boys for new releases and updates!</p>
-    <a href="https://www.instagram.com/the_manga_boys/" target="_blank" class="btn">Follow Now</a>
-</section>
-
-<footer style="text-align:center; padding:20px; font-size:0.9em; color:var(--muted);">
-    © 2025 The Manga Boys. All rights reserved. Managed by Abel S Thomas & Ajin K Daniel.
-</footer>
-
-</body>
-</html>
+<section>
+  <img src="logo.png" alt="The Manga Boys Logo" />
+  <
