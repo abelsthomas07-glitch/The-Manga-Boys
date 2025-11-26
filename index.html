@@ -3,39 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Manga Boys — eBooks & Books</title>
-  <meta name="description" content="The Manga Boys — buy manga ebooks and print books. Purchase via WhatsApp or request shipping." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Buy Manga eBooks & Print Manga — The Manga Boys</title>
+  <meta name="description" content="Buy affordable manga ebooks and printed manga books in India. WhatsApp ordering, fast shipping, curated titles and bundles." />
+  <meta name="theme-color" content="#0f1724" />
   <style>
-    :root {
-      --accent: #034078;
-      --bg: #F0F4F8;
-      --card: #ffffff;
-      --muted: #627D98;
-      --highlight: #001F54;
+    /* Palette: Deep Red + Charcoal + White + Gold accent */
+    :root{
+      --accent:#c81e2c;        /* deep manga red */
+      --accent-strong:#a41722; /* slightly darker for hover */
+      --bg:#fbfbfc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --char:#0f1724; /* page charcoal */
+      --gold:#f6c85f;
+      --glass:rgba(255,255,255,0.6);
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: #111; }
-    header { background: var(--highlight); color: white; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; gap: 12px; align-items: center; }
-    .logo .mark { width: 48px; height: 48px; border-radius: 8px; background: white; color: var(--accent); display: grid; place-items: center; font-weight: 700; }
-    nav a { color: white; margin-right: 12px; text-decoration: none; font-weight: 500; }
-    nav a:hover { opacity: 0.7; }
-    .container { max-width: 1100px; margin: 28px auto; padding: 0 18px; }
-    .hero { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-    .hero h1 { margin: 0; font-size: 32px; color: var(--highlight); }
-    .hero p { color: var(--muted); }
-    .btn { background: var(--accent); color: white; padding: 10px 14px; border-radius: 8px; text-decoration: none; display: inline-block; transition: .25s ease; }
-    .btn:hover { transform: scale(1.05); }
-    .outline { border: 1px solid var(--accent); padding: 8px 10px; border-radius: 8px; text-decoration: none; color: var(--accent); transition: .25s ease; }
-    .outline:hover { transform: scale(1.05); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
-    .card { background: var(--card); padding: 12px; border-radius: 12px; box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06); display: flex; flex-direction: column; transition: .3s ease; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
-    .thumb { height: 220px; border-radius: 8px; background-size: cover; background-position: center; }
-    .muted { color: var(--muted); font-size: 14px; }
-    footer { padding: 18px; color: var(--muted); text-align: center; margin-top: 36px; font-size: 14px; }
-    @media(max-width:600px) { h1 { font-size: 22px; } h2 { font-size: 18px; } p { font-size: 14px; } }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--char);-webkit-font-smoothing:antialiased}
+
+    header{background:linear-gradient(90deg,var(--char),var(--accent));color:white;padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:52px;height:52px;border-radius:10px;background:white;color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:18px}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;padding:20px;border-radius:12px;background:linear-gradient(180deg, rgba(200,30,44,0.04), transparent);position:relative;overflow:hidden}
+    .hero::after{content:'';position:absolute;right:-10%;top:-10%;width:560px;height:560px;background:radial-gradient(circle at 30% 30%, rgba(200,30,44,0.06), transparent 20%), radial-gradient(circle at 70% 70%, rgba(246,200,95,0.04), transparent 15%);transform:rotate(12deg);pointer-events:none}
+
+    .hero .left{flex:1;min-width:260px;z-index:1}
+    .hero h1{margin:0;font-size:32px;line-height:1.05}
+    .hero h1 .accent{color:var(--accent);font-weight:800}
+    .hero p{color:var(--muted);margin-top:10px}
+    .cta{margin-top:14px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block;border:none;font-weight:700}
+    .btn:focus{outline:3px solid rgba(200,30,44,0.18)}
+    .outline{border:1px solid #e9edf2;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--accent);display:inline-block}
+
+    /* product grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}
+    .card{background:var(--card);padding:14px;border-radius:14px;box-shadow:0 8px 24px rgba(10,10,10,0.06);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(10,10,10,0.12)}
+
+    .thumb{height:220px;border-radius:10px;background:#e6eef8;background-size:cover;background-position:center;display:block}
+    h3{margin:12px 0 6px 0;font-size:18px}
+    .price{font-weight:800}
+    .muted{color:var(--muted);font-size:14px}
+    .actions{margin-top:auto;display:flex;gap:8px;align-items:center}
+
+    .outline.small{padding:8px 10px;font-size:14px}
+    .badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--char);padding:6px 8px;border-radius:8px;font-weight:700;font-size:12px}
+
+    footer{padding:22px;color:var(--muted);text-align:center;margin-top:36px}
+
+    /* modal */
+    .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
+    .modal{background:white;padding:18px;border-radius:12px;max-width:640px;width:100%}
+    .close{float:right;border:none;background:none;font-size:18px}
+
+    /* small screens */
+    @media (max-width:760px){
+      .hero h1{font-size:22px}
+      header{padding:14px}
+    }
+
+    /* subtle focus states for accessibility */
+    a:focus{outline:3px solid rgba(20,20,20,0.06);outline-offset:3px}
+
   </style>
 </head>
 <body>
@@ -43,67 +77,165 @@
     <div class="logo">
       <div class="mark">TM</div>
       <div>
-        <div style="font-weight:700">The Manga Boys</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.9)">Manga ebooks · Print books · WhatsApp purchases</div>
+        <div style="font-weight:800">The Manga Boys</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.9)">Manga ebooks · Print books · WhatsApp orders</div>
       </div>
     </div>
     <nav>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
+      <a href="#products" style="color:white;margin-right:14px;text-decoration:none">Products</a>
+      <a href="#contact" style="color:white;text-decoration:none">Contact</a>
     </nav>
   </header>
 
-  <section style="padding:20px;text-align:center;background:var(--accent);color:white;">
-    <img src="logo.png" alt="The Manga Boys Logo" style="width:120px;height:120px;border-radius:50%;background:white;padding:10px;object-fit:cover;margin-bottom:10px;" />
-    <h2>Follow Us On Instagram</h2>
-    <p>@the_manga_boys</p>
-    <a class="btn" href="https://instagram.com/the_manga_boys" target="_blank">Open Instagram</a>
+  <!-- Instagram + Logo Section -->
+  <section style="padding:22px;text-align:center;background:linear-gradient(90deg,#fff1f3,#fff8eb);color:var(--char);border-bottom:1px solid rgba(15,23,36,0.03);">
+    <img src="logo.png" alt="The Manga Boys Logo" style="width:120px;height:120px;border-radius:50%;background:white;padding:10px;object-fit:cover;margin-bottom:10px;" loading="lazy"/>
+    <h2 style="margin:6px 0">Follow Us On Instagram</h2>
+    <p class="muted">@the_manga_boys</p>
+    <p style="margin-top:8px"><a class="btn" href="https://instagram.com/the_manga_boys" target="_blank" rel="noopener">Open Instagram</a></p>
   </section>
 
   <main class="container">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="left">
-        <h1>We are <span style="color:var(--accent)">The Manga Boys</span></h1>
-        <p class="muted">Selling carefully curated manga ebooks and printed books. Want a physical copy? We'll ship it. Want to buy now? Purchase via WhatsApp — fast and simple.</p>
+        <h1 id="hero-heading">We are <span class="accent">The Manga Boys</span></h1>
+        <p class="muted">Curated manga ebooks and printed editions. Want a physical copy? We ship across India. Ready to buy? Order quickly via WhatsApp.</p>
         <div class="cta">
           <a class="btn" href="#products">Browse our collection</a>
-          <a class="outline" href="#contact" style="margin-left:8px">Request shipping</a>
+          <a class="outline" href="#contact" style="margin-left:10px">Request shipping</a>
         </div>
       </div>
-      <div style="min-width:220px;flex:0 0 320px">
-        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=60" alt="manga" style="width:100%;border-radius:12px;display:block" />
+
+      <div style="min-width:220px;flex:0 0 340px;z-index:1">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="stack of manga and coffee" style="width:100%;border-radius:12px;display:block;box-shadow:0 10px 30px rgba(10,10,10,0.06)" loading="lazy"/>
       </div>
     </section>
 
     <section id="products">
-      <h2 style="margin-top:28px;color:var(--highlight)">Our Picks</h2>
+      <h2 style="margin-top:28px">Our Picks</h2>
       <div class="grid">
-        <article class="card">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=60')"></div>
-          <h3>Manga Title One</h3>
+
+        <!-- product 1 -->
+        <article class="card" aria-labelledby="p1">
+          <span class="badge">Best Seller</span>
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop')" role="img" aria-label="Manga Title One cover"></div>
+          <h3 id="p1">Manga Title One</h3>
           <div class="muted">eBook · PDF</div>
           <div style="margin-top:8px"><span class="price">₹120</span></div>
-          <p class="muted">Short blurb: A fast-paced adventure.</p>
+          <p class="muted">A fast-paced adventure for readers who love action and heart.</p>
           <div class="actions">
-            <a class="outline" href="#">Buy on Instagram</a>
-            <a class="btn" href="#">Buy on WhatsApp</a>
+            <a class="outline small" href="https://instagram.com/the_manga_boys" target="_blank" rel="noopener">Buy on Instagram</a>
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Manga Title One','₹120')">Buy on WhatsApp</a>
+            <a class="outline small" href="#" onclick="openDetails(event,'Manga Title One','Longer description for Manga Title One. Includes formats: eBook (PDF), mobi.')">Details</a>
           </div>
         </article>
+
+        <!-- product 2 -->
+        <article class="card" aria-labelledby="p2">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop')" role="img" aria-label="Manga Title Two cover"></div>
+          <h3 id="p2">Manga Title Two</h3>
+          <div class="muted">Print book available</div>
+          <div style="margin-top:8px"><span class="price">₹350 (Print)</span></div>
+          <p class="muted">Emotional slice-of-life — perfect for weekend reading.</p>
+          <div class="actions">
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Manga Title Two (Print)','₹350')">Buy on WhatsApp</a>
+            <a class="outline small" href="#" onclick="openDetails(event,'Manga Title Two','Print copy — we ship within 5–10 days. Priority shipping available.')">Details</a>
+          </div>
+        </article>
+
+        <!-- product 3 -->
+        <article class="card" aria-labelledby="p3">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=800&auto=format&fit=crop')" role="img" aria-label="Anthology Pack cover"></div>
+          <h3 id="p3">Anthology Pack</h3>
+          <div class="muted">eBook bundle</div>
+          <div style="margin-top:8px"><span class="price">₹250</span></div>
+          <p class="muted">Three short manga stories bundled together — great value.</p>
+          <div class="actions">
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Anthology Pack','₹250')">Buy on WhatsApp</a>
+            <a class="outline small" href="#" onclick="openDetails(event,'Anthology Pack','Bundle includes three eBooks delivered as ZIP via email or Google Drive link.')">Details</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
+    <!-- contact / shipping -->
     <section id="contact" style="margin-top:28px">
-      <h2 style="color:var(--highlight)">Contact & Shipping</h2>
-      <p class="muted">To buy any item, click "Buy on WhatsApp" for that item. We'll receive your order and reply with payment and shipping options.</p>
-      <p><a class="btn" href="#">Request shipping via WhatsApp</a></p>
+      <h2>Contact & Shipping</h2>
+      <p class="muted">To buy any item, click "Buy on WhatsApp" for that item. We'll receive your order on WhatsApp and reply with payment and shipping options.</p>
+      <p class="muted">Prefer a shipping quote first? Click the button below to send us your address and which book you want.</p>
+      <p style="margin-top:10px"><a class="btn" href="#" onclick="requestShipping(event)">Request shipping via WhatsApp</a></p>
+
       <div style="margin-top:18px">
-        <strong>Phone (WhatsApp):</strong> +91 99999 99999
+        <strong>Phone (WhatsApp):</strong> <span id="phoneDisplay">+91 99999 99999</span>
+        <div class="muted" style="margin-top:6px">(Replace the WhatsApp number in the HTML <code>PHONE_NUMBER</code> constant with your own number.)</div>
       </div>
     </section>
+
   </main>
 
   <footer>
-    © 2025 Abel & Ajin | The Manga Boys | All Rights Reserved
+    <div style="margin-bottom:8px;">Also available on Instagram · <a href="https://instagram.com/the_manga_boys" target="_blank" rel="noopener">@the_manga_boys</a></div>
+    © <span id="year"></span> The Manga Boys — All rights reserved · Follow us on WhatsApp to order · Follow us on Instagram: <a href="https://instagram.com/the_manga_boys" target="_blank" rel="noopener">@the_manga_boys</a>
   </footer>
+
+  <!-- modal -->
+  <div id="modalBg" class="modal-bg" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" onclick="closeModal()" aria-label="Close details">✕</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalBody" class="muted"></p>
+      <div style="margin-top:12px">
+        <a class="btn" href="#" id="modalBuy">Buy on WhatsApp</a>
+        <button class="outline" onclick="closeModal()" style="margin-left:8px">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ----- IMPORTANT: replace PHONE_NUMBER with your WhatsApp number in international format WITHOUT + or dashes.
+    // Example for India: 919876543210
+    const PHONE_NUMBER = '917042496969'; // <-- change this to your number
+
+    function urlEncode(text){return encodeURIComponent(text)}
+
+    function buyWhatsApp(e, title, price){
+      e.preventDefault();
+      const text = `Hi, I want to buy ${title} priced at ${price}. Please tell me the payment and delivery options.`;
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode(text)}`;
+      window.open(url,'_blank','noopener');
+    }
+
+    function requestShipping(e){
+      e.preventDefault();
+      const text = `Hi, I want a shipping quote. My address: [paste your address]
+Book: [title here]`;
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode(text)}`;
+      window.open(url,'_blank','noopener');
+    }
+
+    // modal helpers
+    function openDetails(e,title,desc){
+      e.preventDefault();
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').textContent = desc;
+      document.getElementById('modalBuy').href = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode('Hi, I want to buy '+title)}`;
+      document.getElementById('modalBg').style.display = 'flex';
+      document.getElementById('modalBg').setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      document.getElementById('modalBg').style.display='none';
+      document.getElementById('modalBg').setAttribute('aria-hidden','true');
+    }
+
+    // small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // show with international + and spacing grouping for readability
+    document.getElementById('phoneDisplay').textContent = '+' + PHONE_NUMBER.replace(/(\d{2})(\d+)/, function(m,p1,p2){return p1+' '+p2});
+
+    // keyboard accessibility: close modal on Escape
+    window.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal() });
+
+  </script>
 </body>
 </html>
