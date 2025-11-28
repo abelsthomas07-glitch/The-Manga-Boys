@@ -1,165 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Manga Boys - Official Website</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  color: #222;
-}
-header {
-  text-align: center;
-  padding: 40px 10px;
-}
-nav a {
-  margin: 0 15px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.section {
-  padding: 35px 20px;
-  text-align: center;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Manga Boys — eBooks & Books</title>
+  <meta name="description" content="The Manga Boys — buy manga ebooks and print books. Purchase via WhatsApp or request shipping." />
+  <style>
+    :root{--accent:#e02424;--bg:#fff6f8;--card:#ffffff;--muted:#6b7280;--lightblue:#add8ff;--lightpink:#ffb6d5}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#e02424,#add8ff,#ffb6d5);color:white;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:48px;height:48px;border-radius:8px;background:white;color:var(--accent);display:grid;place-items:center;font-weight:700}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+    .hero{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .hero .left{flex:1;min-width:260px}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{color:var(--muted)}
+    .cta{margin-top:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block}
 
-button {
-  padding: 12px 22px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 10px;
-  background: #ff4b5c;
-  color: white;
-  transition: 0.3s;
-}
-button:hover {
-  transform: scale(1.05);
-}
-.quote-box {
-  margin: 40px auto;
-  padding: 25px;
-  width: 60%;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-</style>
+    /* product grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.06);display:flex;flex-direction:column}
+    .thumb{height:220px;border-radius:8px;background:#e6eef8;background-size:cover;background-position:center}
+    h3{margin:10px 0 6px 0;font-size:18px}
+    .price{font-weight:700}
+    .muted{color:var(--muted);font-size:14px}
+    .actions{margin-top:auto;display:flex;gap:8px}
+    .outline{border:1px solid #e2e8f0;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--accent);display:inline-block}
+
+    footer{padding:18px;color:var(--muted);text-align:center;margin-top:36px}
+
+    /* small modal */
+    .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center}
+    .modal{background:white;padding:18px;border-radius:12px;max-width:540px;width:92%}
+    .close{float:right;border:none;background:none;font-size:18px}
+
+    @media (max-width:560px){.hero h1{font-size:22px}}
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <div class="mark">TM</div>
+      <div>
+        <div style="font-weight:700">The Manga Boys</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.9)">Manga ebooks · Print books · WhatsApp purchases</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#products" style="color:white;margin-right:12px;text-decoration:none">Products</a>
+      <a href="#contact" style="color:white;text-decoration:none">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Welcome to The Manga Boys</h1>
-  <p>Your space for manga books & digital stories</p>
-</header>
+  <!-- Instagram + Logo Section -->
+  <section style="padding:20px;text-align:center;background:linear-gradient(90deg,#ffb6d5,#add8ff);color:#111;">
+    <img src="logo.png" alt="The Manga Boys Logo" style="width:120px;height:120px;border-radius:50%;background:white;padding:10px;object-fit:cover;margin-bottom:10px;" />
+    <h2>Follow Us On Instagram</h2>
+    <p>@the_manga_boys</p>
+    <a class="btn" href="https://instagram.com/the_manga_boys" target="_blank">Open Instagram</a>
+  </section>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="founders.html">Meet the Founders</a>
-</nav>
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>We are <span style="color:var(--accent)">The Manga Boys</span></h1>
+        <p class="muted">Selling carefully curated manga ebooks and printed books. Want a physical copy? We'll ship it. Want to buy now? Purchase via WhatsApp — fast and simple.</p>
+        <div class="cta">
+          <a class="btn" href="#products">Browse our collection</a>
+          <a class="outline" href="#contact" style="margin-left:8px">Request shipping</a>
+        </div>
+      </div>
+      <div style="min-width:220px;flex:0 0 320px">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="manga" style="width:100%;border-radius:12px;display:block" />
+      </div>
+    </section>
 
-<div class="section">
-  <h2>Explore Our World</h2>
-  <p>We bring stories, imagination, and manga magic right to your screen.</p>
-  <button onclick="location.href='founders.html'">Meet the Founders</button>
-</div>
+    <section id="products">
+      <h2 style="margin-top:28px">Our Picks</h2>
+      <div class="grid">
+        <!-- product 1 -->
+        <article class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop')"></div>
+          <h3>Manga Title One</h3>
+          <div class="muted">eBook · PDF</div>
+          <div style="margin-top:8px"><span class="price">₹120</span></div>
+          <p class="muted">Short blurb: A fast-paced adventure.</p>
+          <div class="actions">
+            <a class="outline" href="https://instagram.com/the_manga_boys" target="_blank">Buy on Instagram</a>
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Manga Title One','₹120')">Buy on WhatsApp</a>
+            <a class="outline" href="#" onclick="openDetails(event,'Manga Title One','Longer description for Manga Title One. Includes formats: eBook (PDF), mobi.')">Details</a>
+          </div>
+        </article>
 
-<div class="quote-box">
-  <h3>Quote of the Day</h3>
-  <p><i>"Passion gives birth to ideas, and ideas build empires."</i></p>
-</div>
+        <!-- product 2 -->
+        <article class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop')"></div>
+          <h3>Manga Title Two</h3>
+          <div class="muted">Print book available</div>
+          <div style="margin-top:8px"><span class="price">₹350 (Print)</span></div>
+          <p class="muted">Short blurb: Emotional slice-of-life.</p>
+          <div class="actions">
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Manga Title Two (Print)','₹350')">Buy on WhatsApp</a>
+            <a class="outline" href="#" onclick="openDetails(event,'Manga Title Two','Print copy — we ship within 5–10 days. Priority shipping available.')">Details</a>
+          </div>
+        </article>
 
-<footer>
-  <p>© 2025 The Manga Boys. All rights reserved.</p>
-</footer>
+        <!-- product 3 -->
+        <article class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=800&auto=format&fit=crop')"></div>
+          <h3>Anthology Pack</h3>
+          <div class="muted">eBook bundle</div>
+          <div style="margin-top:8px"><span class="price">₹250</span></div>
+          <p class="muted">Short blurb: Three short manga stories bundled together.</p>
+          <div class="actions">
+            <a class="btn" href="#" onclick="buyWhatsApp(event,'Anthology Pack','₹250')">Buy on WhatsApp</a>
+            <a class="outline" href="#" onclick="openDetails(event,'Anthology Pack','Bundle includes three eBooks delivered as ZIP via email or Google Drive link.')">Details</a>
+          </div>
+        </article>
 
-</body>
-</html>
+      </div>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Meet the Founders</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #d9afd9, #97d9e1);
-}
-header {
-  text-align: center;
-  padding: 40px 10px;
-}
-nav a {
-  margin: 0 15px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 40px 0;
-}
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
-}
-.quote {
-  font-style: italic;
-  font-size: 18px;
-  margin-top: 10px;
-}
-</style>
-</head>
-<body>
+    <!-- contact / shipping -->
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact & Shipping</h2>
+      <p class="muted">To buy any item, click "Buy on WhatsApp" for that item. We'll receive your order on WhatsApp and reply with payment and shipping options.</p>
+      <p class="muted">Prefer to request a shipping quote first? Click the button below to send us your address and which book you want.</p>
+      <p><a class="btn" href="#" onclick="requestShipping(event)">Request shipping via WhatsApp</a></p>
 
-<header>
-  <h1>Meet the Founders</h1>
-</header>
+      <div style="margin-top:18px">
+        <strong>Phone (WhatsApp):</strong> <span id="phoneDisplay">+91 99999 99999</span>
+        <div class="muted" style="margin-top:6px"></div>
+      </div>
+    </section>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="founders.html">Founders</a>
-</nav>
+  </main>
 
-<div class="container">
+  <footer>
+    <div style="margin-bottom:8px;">Also available on Instagram · <a href="https://instagram.com/the_manga_boys" target="_blank">@the_manga_boys</a></div>
+    © <span id="year"></span> The Manga Boys — All rights reserved · Follow us on WhatsApp to order · Follow us on Instagram: <a href="https://instagram.com/the_manga_boys" target="_blank">@the_manga_boys</a>
+  </footer>
 
-  <div class="card">
-    <h2>Ajin — Illustration</h2>
-    <div class="quote">
-      “It is an honor to work on eBooks and sell them online. The journey was full of struggles, 
-      yet we stood strong. To every young creator out there — keep thinking, keep writing, because 
-      success demands effort, innovation, and creativity.”
+  <!-- modal -->
+  <div id="modalBg" class="modal-bg">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="close" onclick="closeModal()">✕</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalBody" class="muted"></p>
+      <div style="margin-top:12px">
+        <a class="btn" href="#" id="modalBuy">Buy on WhatsApp</a>
+        <button class="outline" onclick="closeModal()" style="margin-left:8px">Close</button>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <h2>Abel — Web Designing</h2>
-    <div class="quote">
-      “Dreams don’t arrive ready-made — we shape them with our discipline. I believe ambition means 
-      building something the world hasn’t seen yet. The day your passion becomes your responsibility, 
-      success stops being a destination and becomes your identity.”
-    </div>
-  </div>
+  <script>
+    // ----- IMPORTANT: replace PHONE_NUMBER with your WhatsApp number in international format WITHOUT + or dashes.
+    // Example for India: 919876543210
+    const PHONE_NUMBER = '917042496969'; // <-- change this to your number
 
-</div>
+    function urlEncode(text){return encodeURIComponent(text)}
 
+    function buyWhatsApp(e, title, price){
+      e.preventDefault();
+      const text = `Hi, I want to buy ${title} priced at ${price}. Please tell me the payment and delivery options.`;
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode(text)}`;
+      window.open(url,'_blank');
+    }
+
+    function requestShipping(e){
+      e.preventDefault();
+      const text = `Hi, I want a shipping quote. My address: [paste your address]\nBook: [title here]`;
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode(text)}`;
+      window.open(url,'_blank');
+    }
+
+    // modal helpers
+    function openDetails(e,title,desc){
+      e.preventDefault();
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').textContent = desc;
+      document.getElementById('modalBuy').href = `https://wa.me/${PHONE_NUMBER}?text=${urlEncode('Hi, I want to buy '+title)}`;
+      document.getElementById('modalBg').style.display = 'flex';
+    }
+    function closeModal(){document.getElementById('modalBg').style.display='none'}
+
+    // small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('phoneDisplay').textContent = '+ ' + PHONE_NUMBER.replace(/(\d{2})(\d+)/, function(m,p1,p2){return p1+' '+p2});
+  </script>
 </body>
 </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meet the Founders — The Manga Boys</title>
+  <style>
+    :root{--accent:#e02424;--bg:#fff6f8;--card:#ffffff;--muted:#6b7280;--lightblue:#add8ff;--lightpink:#ffb6d5}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#e02424,#add8ff,#ffb6d5);color:white;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+    a{text-decoration:none;color:white}
+    .container{max-width:900px;margin:32px auto;padding:0 20px}
+    h1{font-size:28px;margin:0 0 16px 0;text-align:center}
+    .founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .name{font-size:20px;font-weight:700;margin:0 0 6px 0;color:var(--accent)}
+    .role{font-size:14px;color:var(--muted);margin-bottom:10px}
+    footer{text-align:center;color:var(--muted);margin-top:40px;padding:18px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;display:inline-block;margin-top:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:700;font-size:20px">The Manga Boys</div>
+    <nav><a href="index.html">Home</a></nav>
+  </header>
+
+  <main class="container">
+    <h1>Meet the Founders</h1>
+    <p style="text-align:center;color:var(--muted);max-width:620px;margin:0 auto 28px auto">The Manga Boys began as a dream shared by two passionate creators — one who brings characters to life through art and another who builds digital worlds where stories live.</p>
+
+    <section class="founders">
+      <div class="card">
+        <div class="name">Ajin</div>
+        <div class="role">Illustration</div>
+        <p>It is a privilege to create and share eBooks with the world. Our journey has not been easy, but every challenge has shaped us and pushed us forward. To all the young founders out there — keep imagining, keep writing, and keep building your dreams. Success is not a shortcut; it is a marathon of patience, effort, innovation, and creativity. We are the backbone of our ideas, and our work is the legacy we create.</p>
+      </div>
+      <div class="card">
+        <div class="name">Abel</div>
+        <div class="role">Web Designing</div>
+        <p>"I don’t chase opportunities — I create them. Where others see a page, I see a universe waiting to be built. The Manga Boys is proof that ambition backed by action can turn an ordinary boy into a name the world remembers."</p>
+      </div>
+    </section>
+
+    <section style="margin-top:36px">
+      <h2 style="text-align:center;margin-bottom:12px">How It All Started</h2>
+      <p style="text-align:center;color:var(--muted);max-width:640px;margin:0 auto">What began as a hobby — sharing, reading, and discussing manga — soon evolved into a platform. With Ajin's talent for illustration and Abel's passion for digital creation, The Manga Boys was born. Today, they provide curated manga, ebooks, and collectible prints to fans who love unique stories and characters.</p>
+    </section>
+
+    <div style="text-align:center;margin-top:28px">
+      <a href="index.html" class="btn">Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> The Manga Boys — Founders Page
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
+
